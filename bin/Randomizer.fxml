@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appController">
+   <children>
+      <Pane prefHeight="476.0" prefWidth="399.0">
+         <children>
+            <ScrollPane fx:id="characterSelectScrollPane" layoutX="14.0" layoutY="127.0" prefHeight="335.0" prefWidth="170.0" />
+            <ImageView fx:id="characterImageDisplay" fitHeight="344.0" fitWidth="187.0" layoutX="200.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Questionmark.png" />
+               </image></ImageView>
+            <Button fx:id="randomizeButton" layoutX="84.0" layoutY="42.0" mnemonicParsing="false" onAction="#randomize" prefHeight="37.0" prefWidth="230.0" text="Randomize" />
+            <Text fx:id="nameText" layoutX="200.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" textAlignment="CENTER" wrappingWidth="186.99999821477104">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <MenuBar fx:id="mb" prefHeight="25.0" prefWidth="346.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem fx:id="selectAllMenu" mnemonicParsing="false" onAction="#selectAll" text="Select All" />
+                        <MenuItem fx:id="deselectAllMenu" mnemonicParsing="false" onAction="#deselectAll" text="Deselect All" />
+                        <MenuItem fx:id="updateMenu" mnemonicParsing="false" onAction="#update" text="Update" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Button fx:id="quitButton" layoutX="372.0" layoutY="-1.0" mnemonicParsing="false" onAction="#quit" prefHeight="25.0" prefWidth="27.0" snapToPixel="false" text="X" />
+            <Button fx:id="minimizeButton" layoutX="346.0" layoutY="-1.0" mnemonicParsing="false" onAction="#minimize" prefHeight="25.0" prefWidth="27.0" text="m" />
+            <CheckBox fx:id="repeatsCheckbox" layoutX="130.0" layoutY="93.0" mnemonicParsing="false" text="Allow Repeats">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
